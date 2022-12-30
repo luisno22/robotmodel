@@ -157,10 +157,6 @@ using namespace std;
 
   int main(int argc, char *argv[])
   {
-    // double x[] = { 0,-0.00425954,0.00467763,0.00408999,0.00236174,0.003445,0.00198645,0.00448642,0.00344721,0.00406232,0.00425851,0.00344348,-0.00939013};
-    // double y[] = { 0,-0.000171595,0.00135452,0.000342268,-0.00231112,-0.000149996,-0.000937097,0.00249682,0.000151622,-0.000113385,0.00161581};
-    // https://portafoliodemetodos.wordpress.com/2017/04/06/regresion-polinomial/
-    // regresionPolinomial(x, y, sizeof(x)/sizeof(x[0]), 4);
     ifstream filex("vectorx.txt");
     ifstream filey("vectory.txt");
     if (!filex.is_open() || !filey.is_open())
@@ -197,39 +193,6 @@ using namespace std;
       suby.push_back(valory);
     }
 
-    // double valor;
-    // vector<double> vectorx;
-    // while (filex >> valor)
-    //   vectorx.push_back(valor);
-    // vector<double> vectory;
-    // while (filey >> valor)
-    //   vectory.push_back(valor);
-
-    // vector<double> arco_x;
-    // vector<double> arco_y;
-    // for(int i=0;i<number_of_models;i++){
-    //   //Get yml file
-    //   Yml yml_model("configuraciones/robotmodel/model_" + to_string(i) + ".yml");
-    //   //Load yml file
-    //   yml_model.LoadConfiguration();
-    //   vector<double> subarco_x = yml_model.GetDoubleArray("arco_1-vectorx");
-    //   vector<double> subarco_y = yml_model.GetDoubleArray("arco_1-vectory");
-    //   arco_x.insert(arco_x.end(), subarco_x.begin(), subarco_x.end());
-    //   arco_y.insert(arco_y.end(), subarco_y.begin(), subarco_y.end());
-    //   yml_model.Save();
-    // }
-    // double* arco_x_p = new double[arco_x.size()];
-    // std::copy(arco_x.begin(), arco_x.end(), arco_x_p);
-    // double* arco_y_p = new double[arco_y.size()];
-    // std::copy(arco_y.begin(), arco_y.end(), arco_y_p);
-    // vector<double> coef = regresionPolinomial(arco_x_p,arco_y_p,arco_x.size(),7);
-
-    // double* arco_x_p = new double[vectorx.size()];
-    // std::copy(vectorx.begin(), vectorx.end(), arco_x_p);
-    // double* arco_y_p = new double[vectory.size()];
-    // std::copy(vectory.begin(), vectory.end(), arco_y_p);
-    // vector<double> coef = regresionPolinomial(arco_x_p,arco_y_p,vectorx.size(),3);
-
     for(int i=0;i<coefs.size();i++){
       cout<< "Coeficientes de la curva que define la trayectoria numero: "<<i<<" --> ";
       for(int j=0;j<coefs[i].size();j++){
@@ -239,43 +202,6 @@ using namespace std;
     }
     cout<<endl;
 
-
-
-
-
-    // ifstream filex("testx.txt");
-    // if (filex.is_open())
-    // {
-    //   cout << "hola\n";
-    // }
-    // if (!filex.is_open())
-    // {
-    //   cout << "Error al abrir testx.txt\n";
-    //   exit(EXIT_FAILURE);
-    // }
-    // ifstream filey("testy.txt");
-    // ifstream filetheta("testtheta.txt");
-    // string linex;
-    // string liney;
-    // string linetheta;
-    // float pose[3] = {0, 0, 0};
-    // cout << "inicio\n";
-
-    // while (getline(filex, linex))
-    // {
-    //   // cout<<linex<<endl;
-    //   getline(filey, liney);
-    //   getline(filetheta, linetheta);
-    //   float x = stof(linex);
-    //   float y = stof(liney);
-    //   float theta = stof(linetheta);
-    //   tf_position(x, y, theta, 1, 1, -45, pose);
-    //   cout << x << " " << y << " " << theta << " --> ";
-    //   cout << pose[0] << " " << pose[1] << " " << pose[2] << endl;
-    // }
-    // filex.close();
-    // filey.close();
-    // filetheta.close();
     return 0;
   }
 
@@ -284,6 +210,7 @@ using namespace std;
     file << "ciclo_" + std::to_string(ciclo) + ": \n giro: " + std::to_string(giro) + " \n velocidad: " + std::to_string(velocidad) + "\n vectorx:\n  - \n vectory:\n  - \n vectortheta:\n  - \n";
   }
 
+  /// -----  EN DESARROLLO ----- ///
   /// @brief Funcion que modifica la posicion actual por la siguiente posicion una vez aplicado el control necesario durante el tiempo especificado
   /// @param pose array de 3 valores almacenando x,y,theta respectivamente, se modifica durante la funcion
   /// @param control array de 2 valores almacenando velocidad y giro respectivamente

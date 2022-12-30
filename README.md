@@ -14,3 +14,7 @@ Para aumentar la fidelidad del modelo se deberían realizar las mismas trayector
 Una vez obtenido el modelo será necesario programar una función que calcule la siguiente posición del robot dada su posición inicial, una entrada de control y tiempo de ejecución.
 
 Obtenida dicha función este modelo será utilizado para programar un control por aprendizaje por refuerzo.
+
+
+## Especificaciones
+Modelo realizado en una nave industrial utilizando para ello una silla de ruedas motorizada llamada Infinity X modificada para poder controlar sus motores desde software.

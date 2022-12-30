@@ -74,12 +74,12 @@ coeffs_matrix.append([0,1.43616,-0.651065])
 coeffs_matrix.append([0,-2.8708,1.38785])
 
 # Derecha 2
-coeffs_matrix.append([0,2.5477,-0.997032]) #sale mal
+coeffs_matrix.append([0,2.5477,-0.997032])
 coeffs_matrix.append([0,-17.2879,29.6945])
 
 # centro
 coeffs_matrix.append([0,-63.7281,-106.188])
-coeffs_matrix.append([0,-74.3563,1090.69]) # sale mal
+coeffs_matrix.append([0,-74.3563,1090.69])
 
 # izquierda
 coeffs_matrix.append([0,-2.5477,-0.997032])

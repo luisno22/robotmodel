@@ -6,7 +6,7 @@ Codigo que lanza un nodo en ROS2 el cual se encarga de realizar unas trayectoria
 Lee los archivos creado por robotmodel.cpp y realiza una regresión polinomial a partir de los puntos para obtener la ecuación de cada curva, devolviendo así los coeficientes de la ecuación que define cada curva.
 
 ## plot.py
-Realiza diversas gráficas. Gráfica de los valores reales obtenidos en el modelo sin ningun tipo de procesamiento. Gráfica por curvas donde se puede apreciar cada curva de un color distinto. Gráfica de las curvas obtenidas utilizando las ecuaciones obtenidas en modelRL.cpp (por ahora deben ser introducidos a mano los coeficientes de dichas ecuaciones)
+Realiza diversas gráficas. Gráfica de los valores reales obtenidos en el modelo sin ningun tipo de procesamiento (Figure_1.png). Gráfica por curvas donde se puede apreciar cada curva de un color distinto (Figure_2.png). Gráfica de las curvas obtenidas utilizando las ecuaciones obtenidas en modelRL.cpp (por ahora deben ser introducidos a mano los coeficientes de dichas ecuaciones, Figure_3.png)
 
 ## Actualización
 Para aumentar la fidelidad del modelo se deberían realizar las mismas trayectorias una y otra vez, cuantos mas puntos se obtengan mas representativo será el modelo posterior.
